@@ -1,0 +1,13 @@
+.
+├── eShop
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
+├── requirements.txt
+├── templates
+└── tree.txt
+
+2 directories, 8 files
