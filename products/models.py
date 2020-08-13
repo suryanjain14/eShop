@@ -6,7 +6,7 @@ class Products(models.Model):
     price = models.IntegerField()
     rank = models.IntegerField()
     details = models.TextField()
-    date = models.DateField()
+    date = models.DateField(auto_now_add=True)
     image = models.ImageField(default='d.jpg')
 
 
