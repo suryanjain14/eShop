@@ -5,5 +5,6 @@ from django.shortcuts import render
 def h(request):
     return render(request, "timezone/index.html", {})
 
-def about(reuest):
-    return render(reuest , 'timezone/about.html',{})
+
+def about(request):
+    return render(request, 'timezone/about.html', {})

@@ -8,6 +8,6 @@ from products import  views as pv
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', hv.h, name='home'),
-    path('shop/', pv.products(), name='product'),
-    path('about/', hv.about(), name='about')
+    path('shop/', pv.products, name='product'),
+    path('about/', hv.about, name='about')
 ]
