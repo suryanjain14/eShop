@@ -10,17 +10,17 @@
     <link rel="shortcut icon" type="image/x-icon" href="../../static/assets/img/favicon.ico">
 
     <!-- CSS here -->
-        <link rel="stylesheet" href="../../static/assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../static/assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="../../static/assets/css/flaticon.css">
-        <link rel="stylesheet" href="../../static/assets/css/slicknav.css">
-        <link rel="stylesheet" href="../../static/assets/css/animate.min.css">
-        <link rel="stylesheet" href="../../static/assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="../../static/assets/css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="../../static/assets/css/themify-icons.css">
-        <link rel="stylesheet" href="../../static/assets/css/slick.css">
-        <link rel="stylesheet" href="../../static/assets/css/nice-select.css">
-        <link rel="stylesheet" href="../../static/assets/css/style.css">
+    <link rel="stylesheet" href="../../static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../static/assets/css/flaticon.css">
+    <link rel="stylesheet" href="../../static/assets/css/slicknav.css">
+    <link rel="stylesheet" href="../../static/assets/css/animate.min.css">
+    <link rel="stylesheet" href="../../static/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../static/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../static/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="../../static/assets/css/slick.css">
+    <link rel="stylesheet" href="../../static/assets/css/nice-select.css">
+    <link rel="stylesheet" href="../../static/assets/css/style.css">
 </head>
 
 <body>
@@ -44,36 +44,31 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><img src="../../static/assets/img/logo/logo.png" alt=""></a>
+<!--                            <img src="../../static/assets/img/logo/logo.png" alt="">-->
+                            <a href="index.html" style="color:black">Ravi Agency</a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
-                            <nav>                                                
-                                <ul id="navigation">  
+                            <nav>
+                                <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">shop</a></li>
-                                    <li><a href="about.html">about</a></li>
-                                    <li class="hot"><a href="#">Latest</a>
+                                    <li><a href="shop/">Product</a></li>
+                                    <li><a href="about/">about</a></li>
                                         <ul class="submenu">
                                             <li><a href="shop.html"> Product list</a></li>
                                             <li><a href="product_details.html"> Product Details</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="blog.html">Blog</a>
-                                        <ul class="submenu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Pages</a>
-                                        <ul class="submenu">
-                                            <li><a href="login.html">Login</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="elements.html">Element</a></li>
-                                            <li><a href="confirmation.html">Confirmation</a></li>
-                                            <li><a href="checkout.html">Product Checkout</a></li>
-                                        </ul>
-                                    </li>
+
+<!--                                    <li><a href="#">Pages</a>-->
+<!--                                        <ul class="submenu">-->
+<!--                                            <li><a href="login.html">Login</a></li>-->
+<!--                                            <li><a href="cart.html">Cart</a></li>-->
+<!--                                            <li><a href="elements.html">Element</a></li>-->
+<!--                                            <li><a href="confirmation.html">Confirmation</a></li>-->
+<!--                                            <li><a href="checkout.html">Product Checkout</a></li>-->
+<!--                                        </ul>-->
+<!--                                    </li>-->
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </nav>
@@ -100,7 +95,7 @@
         </div>
         <!-- Header End -->
     </header>
-
+    {% block content %}{% endblock %}
     <footer>
         <!-- Footer Start-->
         <div class="footer-area footer-padding">
@@ -167,7 +162,7 @@
                         <div class="footer-copy-right">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>                 
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-4 col-md-5">
@@ -197,8 +192,8 @@
     </div>
     <!-- Search model end -->
 
-<!-- JS here -->
-    <!-- All JS Custom Plugins Link Here here -->
+    <!-- JS here -->
+
     <script src="../../static/assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="../../static/assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -216,21 +211,21 @@
     <script src="../../static/assets/js/animated.headline.js"></script>
     <script src="../../static/assets/js/jquery.magnific-popup.js"></script>
 
-    <!-- Scroll up, nice-select, sticky -->
+    <!-- Scrollup, nice-select, sticky -->
     <script src="../../static/assets/js/jquery.scrollUp.min.js"></script>
     <script src="../../static/assets/js/jquery.nice-select.min.js"></script>
     <script src="../../static/assets/js/jquery.sticky.js"></script>
-    
+
     <!-- contact js -->
     <script src="../../static/assets/js/contact.js"></script>
     <script src="../../static/assets/js/jquery.form.js"></script>
     <script src="../../static/assets/js/jquery.validate.min.js"></script>
     <script src="../../static/assets/js/mail-script.js"></script>
     <script src="../../static/assets/js/jquery.ajaxchimp.min.js"></script>
-    
-    <!-- Jquery Plugins, main Jquery -->	
+
+    <!-- Jquery Plugins, main Jquery -->
     <script src="../../static/assets/js/plugins.js"></script>
     <script src="../../static/assets/js/main.js"></script>
-    
+
 </body>
 </html>
