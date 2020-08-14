@@ -11,6 +11,7 @@ urlpatterns = [
     path('', hv.homepage, name='home'),
     path('home/', hv.homepage, name='home'),
     path('shop/', pv.products, name='product'),
+    path('<category>', pv.categories_product, name='product_category'),
     path('about/', hv.about, name='about'),
     path('contact/', cv.contact, name='contact')
 ]
