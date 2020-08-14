@@ -18,7 +18,7 @@ class Products(models.Model):
     rank = models.IntegerField(unique=True)
     details = models.TextField()
     date = models.DateField(auto_now_add=True)
-    image = models.ImageField(default='d.jpg',upload_to='media/profile',unique=True)
+    image = models.ImageField(default='d.jpg',upload_to='profile',unique=True)
     Category = models.CharField(max_length=40, choices=category_choice,default='compressor')
 
     def __str__(self):
