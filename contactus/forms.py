@@ -1,5 +1,7 @@
 from django import forms
 from django.core import validators
+
+
 from .models import Message
 
 
@@ -24,3 +26,15 @@ class ContactForm(forms.ModelForm):
     class Meta:
         model = Message
         fields = ['message', 'name', 'email', 'subject']
+
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        try:
+            validators.validate_email(email)
+            valid_email = True
+        except validators.validate_email.ValidationError:
+            valid_email = False
+        if not valid_email:
+            raise forms.ValidationError("Invalid Email")
+
+        return email
