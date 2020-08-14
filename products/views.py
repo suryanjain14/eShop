@@ -31,3 +31,6 @@ def categories_product(request, category):
     return render(request, 'products/cat.html',
                   {"l_price": products_l_price, 'h_price': products_h_price, 'products_relevance': products_relevance,
                    'categories': categories, 'cat': cat})
+
+def product_detail(request ,pk):
+    product = Products.objects.get(pk=pk)
