@@ -18,7 +18,7 @@ class ContactForm(forms.ModelForm):
                "placeholder": "Enter your name"})
     email.widget.attrs.update({"class": "form-control valid", "name": "email",  "type": "email",
                "onfocus": "this.placeholder = ''", "onblur": "this.placeholder = 'Enter your email'",
-               "placeholder": "Enter your email"})
+               "placeholder": "Enter your email", "onclick":"validateemail()"})
     subject.widget.attrs.update({"class": "form-control valid", "name": "subject",  "type": "text",
                "onfocus": "this.placeholder = ''", "onblur": "this.placeholder = 'Enter subject'",
                "placeholder": "Enter subject"})
