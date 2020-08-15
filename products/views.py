@@ -32,7 +32,8 @@ def categories_product(request, category):
                   {"l_price": products_l_price, 'h_price': products_h_price, 'products_relevance': products_relevance,
                    'categories': categories, 'cat': cat})
 
-def product_detail(request ,pk):
+
+def product_detail(request, pk):
     product = Products.objects.get(pk=pk)
 
-    return re
+    return render(request, 'products/product_details.html', {'product': product})
