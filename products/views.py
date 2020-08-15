@@ -34,3 +34,5 @@ def categories_product(request, category):
 
 def product_detail(request ,pk):
     product = Products.objects.get(pk=pk)
+
+    return re

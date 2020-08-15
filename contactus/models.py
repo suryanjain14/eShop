@@ -10,7 +10,7 @@ class Message(models.Model):
     subject = models.CharField(max_length=30, null=True)
     time = models.DateTimeField(auto_now_add=True)
 
-    def __repr__(self):
+    def __str__(self):
         return f'name:{self.name} time{self.time}'
 
 
