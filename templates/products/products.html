@@ -44,14 +44,21 @@
                     </div>
                     <!-- Select items -->
 
+                    <style>
+                        li:hover{
+                            font-size: medium;
+                        }
 
+
+                    </style>
                     <div class="dropdown">
-                        <button class="btn-xs nav-item  nice-select" type="button" data-toggle="dropdown">
+                        <button class="btn-sm nav-item  nice-select" type="button" data-toggle="dropdown">
                             Categories
                             <span class="caret"></span></button>
-                        <ul class="dropdown-menu"  style="background-color: #f2f2f2; border-radius: 30px;" >
+                        <ul class="dropdown-menu"  style="background-color: #f2f2f2; border-radius: 10px; font-size:small" >
                             {% for category in categories %}
-                                <li style=" color: #c7c7c7"><a style="color: #333333" href="/<{{ category }}>">{{ category }}</a></li>
+                                <li style=" text-align: center;line-height:150% "><a style="color: #433333 " href="/<{{ category }}>"> {{ category }} </a></li>
+
                             {% endfor %}
                         </ul>
                     </div>
