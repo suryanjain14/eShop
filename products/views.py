@@ -35,5 +35,7 @@ def categories_product(request, category):
 
 def product_detail(request, pk):
     product = Products.objects.get(pk=pk)
+    product.popularity += 1
+    product.save()
 
     return render(request, 'products/product_details.html', {'product': product})
