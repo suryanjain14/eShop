@@ -1,0 +1,164 @@
+{% extends "homepage/base.html" %}
+{% load static %}
+{% block content %}
+
+    <main>
+        <!-- Hero Area Start-->
+        <div class="slider-area ">
+            <div class="single-slider slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center">
+                                <h2>Products</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero Area End-->
+        <!-- Latest Products Start -->
+        <section class="popular-items latest-padding">
+
+            <div class="container">
+                <div class="row product-btn justify-content-between mb-40">
+                    <div class="properties__button">
+
+
+                        <!--Nav Button  -->
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"
+                                   role="tab" aria-controls="nav-home" aria-selected="true">Relevance</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+                                   role="tab" aria-controls="nav-profile" aria-selected="false"> Price high to low</a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                                   role="tab" aria-controls="nav-contact" aria-selected="false"> Price low to high</a>
+                            </div>
+                        </nav>
+                        <!--End Nav Button  -->
+                    </div>
+                    <!-- Grid and List view -->
+                    <div class="grid-list-view">
+                    </div>
+                    <!-- Select items -->
+
+                    <style>
+                        li:hover{
+                            font-size: medium;
+                        }
+
+
+                    </style>
+                    <div class="dropdown">
+                        <button class="btn-sm nav-item  nice-select" type="button" data-toggle="dropdown">
+                            Categories
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu"  style="background-color: #f2f2f2; border-radius: 10px; font-size:small" >
+                            {% for category in categories %}
+                                <li style=" text-align: center;line-height:150% "><a style="color: #433333 " href="/<{{ category }}>"> {{ category }} </a></li>
+
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+
+                </div>
+                <!-- Nav Card -->
+                <div class="tab-content" id="nav-tabContent">
+                    <!-- card one -->
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="row">
+
+
+
+
+                            {% for product in products_relevance %}
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                    <div class="single-popular-items mb-50 text-center">
+                                        <div class="popular-img" >
+                                            <img src="{{ product.image.url }}" alt="{{ product.name }}" width="361" height="380">
+                                            <div class="img-cap">
+                                                <span>{{ product.Category }}</span>
+                                            </div>
+                                            <div class="favorit-items">
+                                                <span class="flaticon-heart"></span>
+                                            </div>
+                                        </div>
+                                        <div class="popular-caption">
+                                            <h3><a href="/product/{{product.pk}}">{{ product.name }}</a></h3>
+                                            <span>₹ {{ product.price }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            {% endfor %}
+
+
+                        </div>
+                    </div>
+                    <!-- Card two -->
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <div class="row">
+
+                            {% for product in h_price %}
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                    <div class="single-popular-items mb-50 text-center">
+                                        <div class="popular-img">
+                                            <img src="{{ product.image.url }}" alt="{{ product.name }}" width="361" height="380">
+                                            <div class="img-cap">
+                                                <span>{{ product.Category }}</span>
+                                            </div>
+                                            <div class="favorit-items">
+                                                <span class="flaticon-heart"></span>
+                                            </div>
+                                        </div>
+                                        <div class="popular-caption">
+                                            <h3><a href="/product/{{product.pk}}">{{ product.name }}</a></h3>
+                                            <span>₹ {{ product.price }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            {% endfor %}
+
+
+                        </div>
+                    </div>
+                    <!-- Card three -->
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <div class="row">
+
+                            {% for product in l_price %}
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                    <div class="single-popular-items mb-50 text-center">
+                                        <div class="popular-img">
+                                            <img  src="{{ product.image.url }}" alt="{{ product.name }}" width="361" height="380" >
+                                            <div class="img-cap">
+                                                <span>{{ product.Category }}</span>
+                                            </div>
+                                            <div class="favorit-items">
+                                                <span class="flaticon-heart"></span>
+                                            </div>
+                                        </div>
+                                        <div class="popular-caption">
+                                            <h3><a href="/product/{{product.pk}}">{{ product.name }}</a></h3>
+                                            <span>₹ {{ product.price }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Nav Card -->
+            </div>
+        </section>
+        <!-- Latest Products End -->
+
+    </main>
+
+{% endblock %}
