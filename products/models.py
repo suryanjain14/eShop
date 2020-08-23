@@ -18,9 +18,9 @@ class Products(models.Model):
     rank = models.IntegerField(unique=True)
     details = models.TextField()
     date = models.DateField(auto_now_add=True)
-    image = models.ImageField(default='d.jpg',upload_to='profile',unique=True)
+    image = models.ImageField(default='d.jpg',upload_to='products',unique=True)
     Category = models.CharField(max_length=40, choices=category_choice,default='compressor')
     popularity = models.IntegerField(default=0)
 
     def __str__(self):
-        return f'{self.name}   price:{self.price} rank:{self.rank}  date:{self.date}  category:{self.Category}'
+        return f'{self.name},   price:{self.price}, rank:{self.rank},  date:{self.date},  category:{self.Category}'
