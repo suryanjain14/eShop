@@ -22,9 +22,13 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 's-e9x#!&w42%@$3_$te6%u*622wyfu#7(n10wzipvv&ym+q8g-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE =True
+SECURE_SSL_REDIRECT=True
+
+ALLOWED_HOSTS = ['raviagency.herokuapp.com/']
 
 # Application definition
 
