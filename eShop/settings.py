@@ -26,7 +26,7 @@ DEBUG = True
 
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['raviagency.herokuapp.com' ]
 
 # Application definition
 
