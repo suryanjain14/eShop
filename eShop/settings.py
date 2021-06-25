@@ -24,7 +24,10 @@ SECRET_KEY = 's-e9x#!&w42%@$3_$te6%u*622wyfu#7(n10wzipvv&ym+q8g-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['raviagency.herokuapp.com']
+ALLOWED_HOSTS = ['raviagency.herokuapp.com',
+                 "127.0.0.1",
+                 'localhost',
+                 '127.0.0.1']
 
 # Application definition
 
